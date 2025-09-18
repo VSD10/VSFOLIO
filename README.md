@@ -1,5 +1,5 @@
 
-# Digital Designer Portfolio
+# DHARSHAN Portfolio
 
 A modern, responsive portfolio website built with React, TypeScript, and Tailwind CSS. This portfolio showcases design skills, projects, and professional experience with smooth animations powered by Framer Motion.
 
