@@ -17,10 +17,10 @@ const educationData = [
     description: "Mobility Student | Coursework: Social, Web and Mobile Analytics, Data Warehouse, Web Application Development."
   },
   {
-    institution: "Greenwood Matric Higher Secondary School, India 🇮🇳",
-    degree: "HSC (Higher Secondary Certificate)",
-    duration: "Jun 2020 - Apr 2022",
-    description: "Completed with a focus on Computer Science, achieving a score of 88.6%."
+    institution: "Shri Swamy Matric Hr. Sec. School",
+    degree: "Higher Secondary",
+    duration: "2020 - 2022",
+    description: "12th - 83% | 10th - 96%"
   },
 ];
 

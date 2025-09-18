@@ -35,21 +35,9 @@ const About: React.FC = () => {
       <div className="border border-gray-800 p-8 md:p-12 rounded-lg hover:border-gray-700 transition-colors duration-300">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-center">
           <div className="md:col-span-1 flex justify-center">
-            <motion.div
-              animate={{ 
-                y: [0, -10, 0],
-                rotate: [0, 10, -10, 0],
-                scale: [1, 1.1, 1]
-              }}
-              transition={{ 
-                duration: 4, 
-                repeat: Infinity, 
-                ease: "easeInOut",
-                times: [0, 0.25, 0.5, 0.75, 1]
-              }}
-            >
+            <div>
               <UserIcon className="w-32 h-32 text-gray-500" />
-            </motion.div>
+            </div>
           </div>
           <motion.div 
             className="md:col-span-2"
