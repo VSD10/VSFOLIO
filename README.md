@@ -67,12 +67,7 @@ The portfolio is organized into several key sections:
 - **Achievements**: Notable accomplishments and awards
 - **Contact**: Contact information and social links
 
-## Deployment
 
-This portfolio can be deployed to any static hosting service like Vercel, Netlify, or GitHub Pages.
-
-For AI Studio deployment:
-View your app in AI Studio: https://ai.studio/apps/drive/1b5r94WayzKiwpeHExCSJNTuuxmAGJQPF
 
 ## Technologies Used
 
