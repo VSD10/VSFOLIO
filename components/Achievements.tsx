@@ -13,22 +13,22 @@ const achievementsData = [
     description: 'Collaborated on innovative tech solutions with international teams, gaining exposure to global innovation practices.',
   },
   {
-    year: '2024',
-    title: 'Smart India Hackathon 2024 Qualifier',
-    organization: 'Ministry of Education, India',
-    description: 'Built an LLM-powered ChatBot using Gemini API, showcasing advanced AI integration capabilities.',
-  },
-  {
-    year: '2024',
+    year: '2025',
     title: 'Best Co-Curricular Student Award',
     organization: 'Knowledge Institute of Technology',
     description: 'Recognized for outstanding engagement beyond academics and exceptional contribution to department activities.',
   },
   {
-    year: '2024',
+    year: '2025',
     title: 'Instagram Campaign Success for "Prill Bar"',
     organization: 'Social Media Marketing',
     description: 'Spearheaded an Instagram campaign reaching 10K+ views and 50+ comments organically.',
+  },
+  {
+    year: '2024',
+    title: 'Smart India Hackathon 2024 Qualifier',
+    organization: 'Ministry of Education, India',
+    description: 'Built an LLM-powered ChatBot using Gemini API, showcasing advanced AI integration capabilities.',
   },
   {
     year: '2024',
@@ -128,7 +128,7 @@ const Achievements: React.FC = () => {
         <TrophyIcon className="w-10 h-10 mx-auto mb-4 text-yellow-400" />
         <h3 className="text-xl font-semibold text-white">Coding Platform Achievements</h3>
         <p className="text-gray-400 mt-2">
-          Solved 500+ algorithmic challenges on GeeksforGeeks and 200+ problems on LeetCode.
+          Solved 550+ algorithmic challenges on GeeksforGeeks and 250+ problems on LeetCode.
         </p>
         <a 
           href="https://codolio.com/profile/VSD10" 

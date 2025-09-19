@@ -10,7 +10,7 @@ const projectsData = [
     title: 'Enhanced S3 Compatibility & Testing',
     description: "Verified and enhanced a comprehensive S3 API compatibility test suite (`s3_compat_test.go`, `s3_compat_listing_test.go`), covering bucket operations, object management, metadata, error handling, and advanced features like pagination and ETag validation. Also contributed AWS CLI integration docs and an automated test script to simplify developer onboarding and ensure robust functionality.",
     image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=2070&auto=format&fit=crop',
-    link: 'https://github.com/8fs/core/pulls?q=is%3Apr+author%3Avsd10'
+    link: 'https://github.com/8fs-io/core/pull/34?notification_referrer_id=NT_kwDOBuOOLLUxOTAyNzU3OTUyNjoxMTU1NzYzNjQ#event-19786855528'
   },
   {
     id: '8fs-core2',
@@ -18,7 +18,7 @@ const projectsData = [
     title: "AWS CLI Documentation & Test Automation",
     description: 'Enhanced S3 compatibility by verifying and extending a comprehensive Go-based test suite (`s3_compat_test.go`). The tests cover a wide range of S3 API features, including bucket/object operations, metadata, and error handling. Additionally, contributed AWS CLI integration documentation and an automated shell script to validate S3 operations, simplifying developer onboarding and ensuring robust functionality.',
     image: code,
-    link: 'https://github.com/8fs/core/pulls?q=is%3Apr+author%3Avsd10'
+    link: 'https://github.com/8fs-io/core/issues/18#event-19753907996'
   }
   // {
   //   id: 'langchain',

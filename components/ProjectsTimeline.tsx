@@ -4,6 +4,8 @@ import { DevIcon } from './icons/DevIcon';
 import ProjectCard from './ProjectCard';
 import { ChatbotIcon } from './icons/ChatbotIcon';
 import { SparklesIcon } from './icons/SparklesIcon';
+import { PortfolioIcon } from './icons/PortfolioIcon';
+import { ExtensionIcon } from './icons/ExtensionIcon';
 
 const projects = [
   {
@@ -13,7 +15,7 @@ const projects = [
       "Developed a web tool for efficiently recording and managing student attendance.",
       "Implemented features for marking status, generating reports, and sharing via WhatsApp."
     ],
-    link: "#"
+    link: "https://vsd10.github.io/CSBS/csbs.html"
   },
   {
     icon: <ChatbotIcon className="w-6 h-6 text-gray-400" />,
@@ -22,7 +24,7 @@ const projects = [
       "Developed a chatbot using FastAPI, Python, and MongoDB to reduce manual search by 85%.",
       "Integrated Gemini AI for smart responses, speeding up query resolution by over 80%."
     ],
-    link: "#"
+    link: "https://github.com/VSD10/MEX-ASSISTANT--BITSANDBYTES"
   },
   {
     icon: <SparklesIcon className="w-6 h-6 text-gray-400" />,
@@ -30,8 +32,29 @@ const projects = [
     description: [
       "An AI-powered platform to help students prepare smarter and get hired faster.",
       "Offers adaptive mock tests, real interview simulations, and personalized study roadmaps.",
+      "Still in progress of developing"
+    ],
+    link: "https://mocker-agent.vercel.app/#/mock-test"
+  },
+  {
+    icon: <PortfolioIcon className="w-6 h-6 text-gray-400" />,
+    title: "Portfolio Website",
+    description: [
+      "Built a modern, responsive personal portfolio showcasing projects, skills, and experience with smooth animations.",
+      "Implemented responsive UI/UX optimized for desktop, tablet, and mobile devices.",
+      "Designed interactive sections including About, Skills, Experience, Projects, and Open Source Contributions."
     ],
     link: "#"
+  },
+  {
+    icon: <ExtensionIcon className="w-6 h-6 text-gray-400" />,
+    title: "Website Time Tracker Chrome Extension",
+    description: [
+      "Built a lightweight browser extension to track and visualize website usage for productivity insights.",
+      "Implemented real-time tracking, smart pausing, and daily goals with customizable notifications.",
+      "Designed an interactive dashboard with charts and statistics, storing data locally for privacy."
+    ],
+    link: "https://github.com/VSD10/LAZY_TIMER_EXTENSION"
   },
   // We can add more projects here if needed
 ];

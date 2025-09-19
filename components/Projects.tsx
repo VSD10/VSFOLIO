@@ -13,7 +13,7 @@ const projects = [
       "Developed a web tool for efficiently recording and managing student attendance.",
       "Implemented features for marking status, generating reports, and sharing via WhatsApp."
     ],
-    link: "#"
+    link: "https://vsd10.github.io/CSBS/csbs.html"
   },
   {
     icon: <ChatbotIcon className="w-6 h-6 text-gray-400" />,
@@ -22,7 +22,7 @@ const projects = [
       "Developed a chatbot using FastAPI, Python, and MongoDB to reduce manual search by 85%.",
       "Integrated Gemini AI for smart responses, speeding up query resolution by over 80%."
     ],
-    link: "#"
+    link: "https://github.com/VSD10/MEX-ASSISTANT--BITSANDBYTES"
   },
   {
     icon: <SparklesIcon className="w-6 h-6 text-gray-400" />,
@@ -30,8 +30,9 @@ const projects = [
     description: [
       "An AI-powered platform to help students prepare smarter and get hired faster.",
       "Offers adaptive mock tests, real interview simulations, and personalized study roadmaps.",
+      "Still in progress of developing"
     ],
-    link: "#"
+    link: "https://mocker-agent.vercel.app/#/mock-test"
   }
 ];
 
