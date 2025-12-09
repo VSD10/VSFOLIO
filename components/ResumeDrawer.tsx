@@ -49,7 +49,7 @@ const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => {
 
             <main className="flex-grow p-1 sm:p-2 md:p-4 overflow-hidden">
               <iframe
-                src="https://drive.google.com/file/d/1iXNig9L9sgux1oGoHO2cVxtDUDYPp7eO/preview"
+                src="https://drive.google.com/file/d/16rClm2-YmohgKQ0AxUfmQNzbJyqzKBFM/preview"
                 className="w-full h-full border-0 rounded bg-white"
                 title="Dharshan VS Resume"
               />
