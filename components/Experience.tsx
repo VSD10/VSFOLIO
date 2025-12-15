@@ -5,11 +5,11 @@ import { BriefcaseIcon } from './icons/BriefcaseIcon';
 const experienceData = [
   {
     date: 'July 2024 - Aug 2024',
-    title: 'Frontend & UI/UX Designer',
+    title: 'Frontend & UI/UX Intern',
     company: 'ThinkInfo Solutions',
     description: [
-      'Designed and implemented an intuitive UI/UX for a cross-platform antivirus browser extension using Figma and React.js, resulting in a 35% increase in user engagement.',
-      'Developed responsive frontend components using JavaScript and CSS, improving mobile accessibility and load speed by 25%.',
+      'Redesigned UI workflows for a cross-platform browser extension, improving task efficiency by 35%.',
+      'Built responsive React.js components that reduced load time by 25% and increased mobile accessibility.',
     ],
   },
   {
@@ -17,7 +17,8 @@ const experienceData = [
     title: 'Blockchain Intern',
     company: 'Corizo Pvt. Ltd.',
     description: [
-      'Assisted in testing smart contracts for token transactions and refining deployment logic in Ethereum-based prototypes using Solidity.',
+      'Optimized smart-contract logic, improving transaction reliability and reducing execution failures by 20%.',
+      'Assisted in debugging deployment workflows, enhancing overall system stability by 15%.',
     ],
   },
 ];
@@ -53,7 +54,7 @@ const Experience: React.FC = () => {
           >
             {/* Dot on the line */}
             <div className="absolute left-0 top-1 -translate-x-1/2 w-4 h-4 bg-green-400 rounded-full border-4 border-gray-900"></div>
-            
+
             <div className="pl-8">
               <p className="text-sm text-gray-400">{job.date}</p>
               <h3 className="mt-1 text-xl font-semibold text-white">{job.title}</h3>

@@ -14,7 +14,7 @@ const educationData = [
     institution: "INTI International University, Malaysia 🇲🇾",
     degree: "Student Exchange Program – B.Sc. (Hons) in Computer Science",
     duration: "Jan 2025 - May 2025",
-    description: "Mobility Student | Coursework: Social, Web and Mobile Analytics, Data Warehouse, Web Application Development."
+    description: "Coursework: Web & Mobile Analytics, Data Warehouse, Web Application Development"
   },
   {
     institution: "Shri Swamy Matric Hr. Sec. School",
@@ -42,8 +42,8 @@ const itemVariants = {
 
 const Education: React.FC = () => {
   return (
-    <motion.section 
-      id="education" 
+    <motion.section
+      id="education"
       className="py-12 md:py-20"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
@@ -55,7 +55,7 @@ const Education: React.FC = () => {
           Education
         </h2>
       </div>
-      <motion.div 
+      <motion.div
         className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8"
         variants={containerVariants}
         initial="hidden"
@@ -63,8 +63,8 @@ const Education: React.FC = () => {
         viewport={{ once: true }}
       >
         {educationData.map((edu, index) => (
-          <motion.div 
-            key={index} 
+          <motion.div
+            key={index}
             variants={itemVariants}
             className={index === 2 ? 'md:col-span-2' : ''}
           >

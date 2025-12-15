@@ -4,6 +4,7 @@ import { motion, Variants } from 'framer-motion';
 import { MailIcon } from './icons/MailIcon';
 import { GithubIcon } from './icons/GithubIcon';
 import { LinkedInIcon } from './icons/LinkedInIcon';
+import { PhoneIcon } from './icons/PhoneIcon';
 
 // Fix: Explicitly type variants with Variants to prevent type inference issues.
 const containerVariants: Variants = {
@@ -39,12 +40,17 @@ const socialLinks = [
     label: 'Email',
     icon: <MailIcon className="w-6 h-6" />,
   },
+  {
+    href: 'tel:+917200700290',
+    label: 'Phone',
+    icon: <PhoneIcon className="w-6 h-6" />,
+  },
 ];
 
 const Contact: React.FC = () => {
   return (
-    <motion.section 
-      id="contact" 
+    <motion.section
+      id="contact"
       className="text-center py-12 md:py-20"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}

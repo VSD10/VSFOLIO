@@ -53,7 +53,7 @@ const CertificatesShowcase: React.FC = () => {
   const [activeFilter, setActiveFilter] = useState('AI');
   const [currentPage, setCurrentPage] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
-  const intervalRef = useRef<number | null>(null);
+
 
   const filteredCertifications = useMemo(() => {
     return certificationsData.filter(c => c.category === activeFilter);
@@ -68,22 +68,28 @@ const CertificatesShowcase: React.FC = () => {
     const end = start + ITEMS_PER_PAGE;
     return filteredCertifications.slice(start, end);
   }, [currentPage, filteredCertifications]);
-  
+
   const handleFilterChange = (category: string) => {
     setActiveFilter(category);
     setCurrentPage(0);
   };
 
   useEffect(() => {
-    if (!isHovered && totalPages > 1) {
-      intervalRef.current = window.setInterval(() => {
-        setCurrentPage((prev) => (prev + 1) % totalPages);
-      }, 5000);
+    let interval: number;
+
+    if (!isHovered) {
+      interval = window.setInterval(() => {
+        setActiveFilter((prev) => {
+          const currentIndex = categories.indexOf(prev);
+          const nextIndex = (currentIndex + 1) % categories.length;
+          return categories[nextIndex];
+        });
+        setCurrentPage(0);
+      }, 2000);
     }
-    return () => {
-      if (intervalRef.current) clearInterval(intervalRef.current);
-    };
-  }, [isHovered, totalPages]);
+
+    return () => clearInterval(interval);
+  }, [isHovered]);
 
   return (
     <motion.section
@@ -95,6 +101,8 @@ const CertificatesShowcase: React.FC = () => {
       transition={{ duration: 0.6, ease: 'easeOut' }}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
+      onTouchStart={() => setIsHovered(true)}
+      onTouchEnd={() => setIsHovered(false)}
     >
       <div className="text-center max-w-2xl mx-auto mb-12">
         <h2 className="text-3xl md:text-4xl font-medium bg-gradient-to-tl from-white to-gray-800 bg-clip-text text-transparent">
@@ -107,17 +115,16 @@ const CertificatesShowcase: React.FC = () => {
           <button
             key={category}
             onClick={() => handleFilterChange(category)}
-            className={`px-4 py-2 text-sm rounded-full transition-colors duration-300 ${
-              activeFilter === category
-                ? 'bg-indigo-500 text-white'
-                : 'bg-gray-800 text-gray-400 hover:bg-gray-700 hover:text-white'
-            }`}
+            className={`px-4 py-2 text-sm rounded-full transition-colors duration-300 ${activeFilter === category
+              ? 'bg-indigo-500 text-white'
+              : 'bg-gray-800 text-gray-400 hover:bg-gray-700 hover:text-white'
+              }`}
           >
             {category}
           </button>
         ))}
       </div>
-      
+
       <div className="relative min-h-[550px] md:min-h-[550px] lg:min-h-[380px]">
         <AnimatePresence mode="wait">
           <motion.div

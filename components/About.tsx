@@ -60,15 +60,15 @@ const About: React.FC = () => {
               <ul className="space-y-4 text-gray-400 text-center md:text-left">
                 <motion.li variants={itemVariants} className="flex items-start">
                   <SparklesIcon className="w-6 h-6 mr-4 mt-1 text-gray-400 shrink-0" />
-                  <div><strong className="font-semibold text-gray-200">Self-taught problem solver</strong>, constantly chasing the next challenge and thriving on learning by building.</div>
+                  <div><strong className="font-semibold text-gray-200">AI-driven backend developer</strong> passionate about building fast, simple, and scalable products.</div>
                 </motion.li>
                 <motion.li variants={itemVariants} className="flex items-start">
                   <GlobeAltIcon className="w-6 h-6 mr-4 mt-1 text-gray-400 shrink-0" />
-                  <div>Passionate about <strong className="font-semibold text-gray-200">AI, web development, and open-source</strong>, with a mission to create impact and stay ahead of the curve.</div>
+                  <div>Skilled in <strong className="font-semibold text-gray-200">Python, SQL, and modern LLM workflows</strong> with experience building real-world automation tools.</div>
                 </motion.li>
                  <motion.li variants={itemVariants} className="flex items-start">
                   <CodeBracketIcon className="w-6 h-6 mr-4 mt-1 text-gray-400 shrink-0" />
-                  <div>Always exploring, brainstorming new ideas, and collaborating with tech enthusiasts on innovative projects.</div>
+                  <div>Brings international exposure that strengthens problem-solving and product-thinking at a global level.</div>
                 </motion.li>
               </ul>
 

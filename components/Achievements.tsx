@@ -8,21 +8,27 @@ import { ArrowUpRightIcon } from './icons/ArrowUpRightIcon';
 const achievementsData = [
   {
     year: '2025',
-    title: 'UM Hackathon 2025 Participant',
-    organization: 'University of Malaya, Malaysia',
-    description: 'Collaborated on innovative tech solutions with international teams, gaining exposure to global innovation practices.',
+    title: 'Finalist at Mumbai Hacks 2025',
+    organization: 'Mumbai Hacks',
+    description: 'Recognized for developing a practical and high-impact tech solution.',
+  },
+  {
+    year: '2025',
+    title: 'Solved 700+ Algorithmic Challenges',
+    organization: 'GFG & LeetCode',
+    description: 'Strengthened core problem-solving skills by solving 700+ algorithmic challenges across GFG and LeetCode.',
   },
   {
     year: '2025',
     title: 'Best Co-Curricular Student Award',
     organization: 'Knowledge Institute of Technology',
-    description: 'Recognized for outstanding engagement beyond academics and exceptional contribution to department activities.',
+    description: 'Awarded for leadership and contribution to technical initiatives.',
   },
   {
     year: '2025',
-    title: 'Instagram Campaign Success for "Prill Bar"',
-    organization: 'Social Media Marketing',
-    description: 'Spearheaded an Instagram campaign reaching 10K+ views and 50+ comments organically.',
+    title: 'UM Hackathon 2025 Participant',
+    organization: 'University of Malaya, Malaysia',
+    description: 'Explored industry challenge statements, broadening engineering perspective.',
   },
   {
     year: '2024',
@@ -48,12 +54,6 @@ const achievementsData = [
     organization: 'Google Developer Groups',
     description: 'Engaged in sessions on emerging technologies and innovation within the tech industry.',
   },
-  {
-    year: '2024',
-    title: 'Blockchain Workshop Attendee',
-    organization: 'Bharat Blockchain Council',
-    description: 'Explored blockchain fundamentals and applications, gaining hands-on experience in decentralized technologies.',
-  },
 ];
 
 const Achievements: React.FC = () => {
@@ -64,6 +64,7 @@ const Achievements: React.FC = () => {
     scrollProgress: 0,
     thumbWidth: 0,
   });
+  const [isPaused, setIsPaused] = useState(false);
 
   const updateScrollState = useCallback(() => {
     const el = scrollContainerRef.current;
@@ -94,6 +95,30 @@ const Achievements: React.FC = () => {
     }
   }, [updateScrollState]);
 
+  useEffect(() => {
+    let intervalId: NodeJS.Timeout;
+
+    if (!isPaused) {
+      intervalId = setInterval(() => {
+        const el = scrollContainerRef.current;
+        if (el) {
+          const { scrollLeft, scrollWidth, clientWidth } = el;
+          const maxScrollLeft = scrollWidth - clientWidth;
+
+          if (scrollLeft >= maxScrollLeft - 5) {
+            // If reached the end, scroll back to start smoothly
+            el.scrollTo({ left: 0, behavior: 'smooth' });
+          } else {
+            // Scroll to the next item (approx width of card + gap)
+            el.scrollBy({ left: 350, behavior: 'smooth' });
+          }
+        }
+      }, 3000); // Scroll every 3 seconds
+    }
+
+    return () => clearInterval(intervalId);
+  }, [isPaused]);
+
   const scroll = (direction: 'left' | 'right') => {
     const el = scrollContainerRef.current;
     if (el) {
@@ -118,7 +143,7 @@ const Achievements: React.FC = () => {
         </h2>
       </div>
 
-      <motion.div 
+      <motion.div
         className="border border-gray-800 p-8 rounded-lg mb-12 text-center"
         initial={{ opacity: 0, scale: 0.9 }}
         whileInView={{ opacity: 1, scale: 1 }}
@@ -130,8 +155,8 @@ const Achievements: React.FC = () => {
         <p className="text-gray-400 mt-2">
           Solved 550+ algorithmic challenges on GeeksforGeeks and 250+ problems on LeetCode.
         </p>
-        <a 
-          href="https://codolio.com/profile/VSD10" 
+        <a
+          href="https://codolio.com/profile/VSD10"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center space-x-2 text-sm text-gray-400 hover:text-white transition-colors duration-300 mt-6"
@@ -141,7 +166,12 @@ const Achievements: React.FC = () => {
         </a>
       </motion.div>
 
-      <div className="relative">
+      <div
+        className="relative"
+        onMouseEnter={() => setIsPaused(true)}
+        onMouseLeave={() => setIsPaused(false)}
+        onTouchStart={() => setIsPaused(true)}
+      >
         <div
           ref={scrollContainerRef}
           className="flex overflow-x-auto space-x-8 pb-4 scroll-smooth [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
@@ -162,7 +192,7 @@ const Achievements: React.FC = () => {
             </motion.div>
           ))}
         </div>
-        
+
         {scrollState.thumbWidth < 100 && (
           <div className="flex items-center justify-center mt-8">
             <div className="flex items-center w-full max-w-lg">
@@ -174,9 +204,9 @@ const Achievements: React.FC = () => {
               >
                 <ChevronLeftIcon className="w-6 h-6" />
               </button>
-              
+
               <div className="w-full h-2 bg-gray-800 rounded-full mx-4 relative">
-                <div 
+                <div
                   className="absolute top-0 h-full bg-gray-500 rounded-full transition-all duration-150 ease-in-out"
                   style={{
                     width: `${scrollState.thumbWidth}%`,

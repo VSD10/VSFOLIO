@@ -7,30 +7,20 @@ import { SparklesIcon } from './icons/SparklesIcon';
 
 const projects = [
   {
-    icon: <DevIcon className="w-6 h-6 text-gray-400" />,
-    title: "Attendance Reporter",
+    icon: <SparklesIcon className="w-6 h-6 text-gray-400" />,
+    title: "The Steady — AI Financial Companion",
     description: [
-      "Developed a web tool for efficiently recording and managing student attendance.",
-      "Implemented features for marking status, generating reports, and sharing via WhatsApp."
+      "Built an AI-driven financial system that unified multi-platform gig earnings (Swiggy, Zomato, Uber), giving workers a 100% real-time income overview.",
+      "Implemented AI forecasting, lock-based savings (Shadow Wallet), and adaptive Smart Modes, improving savings stability and decision accuracy by 40%+."
     ],
-    link: "https://vsd10.github.io/CSBS/csbs.html"
+    link: "#"
   },
   {
     icon: <ChatbotIcon className="w-6 h-6 text-gray-400" />,
-    title: "MEX - Merchant Chatbot",
+    title: "MOCKER_AGENT — AI Mock Interview",
     description: [
-      "Developed a chatbot using FastAPI, Python, and MongoDB to reduce manual search by 85%.",
-      "Integrated Gemini AI for smart responses, speeding up query resolution by over 80%."
-    ],
-    link: "https://github.com/VSD10/MEX-ASSISTANT--BITSANDBYTES"
-  },
-  {
-    icon: <SparklesIcon className="w-6 h-6 text-gray-400" />,
-    title: "CareerCopilot – AI Career Companion",
-    description: [
-      "An AI-powered platform to help students prepare smarter and get hired faster.",
-      "Offers adaptive mock tests, real interview simulations, and personalized study roadmaps.",
-      "Still in progress of developing"
+      "Developed an AI-powered platform that auto-generates role-specific mock exams by analysing job descriptions and mapping skills, improving test relevance by 70%.",
+      "Automated evaluation, scoring, and activity logging, reducing manual review time by 80% while ensuring consistent, high-quality assessments."
     ],
     link: "https://mocker-agent.vercel.app/#/mock-test"
   }
@@ -67,7 +57,7 @@ const Projects: React.FC = () => {
           Projects
         </h2>
       </div>
-      <motion.div 
+      <motion.div
         className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         variants={containerVariants}
         initial="hidden"

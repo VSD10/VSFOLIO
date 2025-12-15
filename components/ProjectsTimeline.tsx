@@ -81,8 +81,8 @@ const ProjectsTimeline: React.FC = () => {
       <div
         className="group relative w-full overflow-hidden"
       >
-        <div 
-          className="flex flex-row items-stretch justify-start animate-[marquee_40s_linear_infinite] group-hover:[animation-play-state:paused]"
+        <div
+          className="flex flex-row items-stretch justify-start animate-[marquee_20s_linear_infinite] group-hover:[animation-play-state:paused]"
           style={{ animationName: 'marquee' }}
         >
           {duplicatedProjects.map((project, index) => (
