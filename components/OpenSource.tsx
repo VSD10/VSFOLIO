@@ -80,10 +80,15 @@ const OpenSource: React.FC = () => {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <div>
-        <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-tl from-white to-gray-800 bg-clip-text text-transparent">
-          Open Source Contributions
-        </h2>
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="text-center md:text-left">
+          <p className="text-xs uppercase tracking-[0.28em] text-purple-400 font-medium mb-3">
+            Community & Collaboration
+          </p>
+          <h2 className="text-4xl md:text-5xl font-medium mb-4 bg-gradient-to-br from-white via-gray-200 to-gray-500 bg-clip-text text-transparent">
+            Open Source Contributions
+          </h2>
+        </div>
         <p className="text-gray-400 max-w-3xl mb-12">
           I'm passionate about building in the open and collaborating with the community. Here are some of the projects I've had the pleasure of contributing to.
         </p>
@@ -110,7 +115,12 @@ const OpenSource: React.FC = () => {
             {activeProject && (
                  <motion.div
                     key={activeProject.id}
-                    className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center"
+                    className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center p-8 rounded-2xl"
+                    style={{
+                      background: 'rgba(11,11,14,0.65)',
+                      border: '1px solid rgba(139,92,246,0.15)',
+                      backdropFilter: 'blur(16px)',
+                    }}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -20 }}

@@ -144,7 +144,12 @@ const Achievements: React.FC = () => {
       </div>
 
       <motion.div
-        className="border border-gray-800 p-8 rounded-lg mb-12 text-center"
+        className="p-8 rounded-2xl mb-12 text-center"
+        style={{
+          background: 'rgba(11,11,14,0.65)',
+          border: '1px solid rgba(255,255,255,0.05)',
+          backdropFilter: 'blur(16px)',
+        }}
         initial={{ opacity: 0, scale: 0.9 }}
         whileInView={{ opacity: 1, scale: 1 }}
         viewport={{ once: true }}
@@ -179,7 +184,14 @@ const Achievements: React.FC = () => {
           {achievementsData.map((item, index) => (
             <motion.div
               key={index}
-              className="flex-shrink-0 w-80 bg-gray-800/20 border border-gray-800 p-6 rounded-lg hover:border-gray-700 transition-colors duration-300"
+              className="flex-shrink-0 w-80 p-6 rounded-2xl transition-colors duration-300"
+              style={{
+                background: 'rgba(11,11,14,0.65)',
+                border: '1px solid rgba(255,255,255,0.05)',
+                backdropFilter: 'blur(16px)',
+              }}
+              onMouseEnter={(e) => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.15)' }}
+              onMouseLeave={(e) => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.05)' }}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}

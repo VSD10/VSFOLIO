@@ -26,7 +26,14 @@ const CertificateCard: React.FC<CertificateCardProps> = ({ title, issuer, date, 
       animate="visible"
       exit="exit"
       layout
-      className="bg-gray-800/20 border border-gray-800 p-6 rounded-lg h-full hover:border-gray-700 transition-colors duration-300 flex flex-col"
+      className="p-6 rounded-2xl h-full transition-colors duration-300 flex flex-col"
+      style={{
+        background: 'rgba(11,11,14,0.65)',
+        border: '1px solid rgba(255,255,255,0.05)',
+        backdropFilter: 'blur(16px)',
+      }}
+      onMouseEnter={(e) => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.15)' }}
+      onMouseLeave={(e) => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.05)' }}
     >
       <div className="flex items-start mb-4">
         <div className="flex-shrink-0">
